@@ -143,10 +143,10 @@ class DiscountManager implements DiscountManagerInterface
     /**
      * Determine the discount in the collection with the highest discount value.
      *
-     * @return [type]
+     * @return void
      * 
      */
-    public function setMaxDiscount()
+    public function setMaxDiscount(): void
     {
         $maxDiscount = null;
 
@@ -164,10 +164,10 @@ class DiscountManager implements DiscountManagerInterface
     /**
      * Apply the chosen discount.
      *
-     * @return [type]
+     * @return void
      * 
      */
-    public function apply()
+    public function apply(): void
     {
         $this->priceModel = new PriceModel();
         $this->priceModel->setOriginal($this->product->getPrice());
