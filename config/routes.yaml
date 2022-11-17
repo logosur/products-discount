@@ -1,3 +1,3 @@
-#controllers:
-#    resource: ../src/DDD/Presentation/Controller/SearchController
-#    type: attribute
+controllers:
+    resource: ../src/DDD/Presentation/Controller/SearchController.php
+    type: attribute
