@@ -5,7 +5,7 @@ namespace App\DDD\Domain;
 use App\DDD\Domain\ValueObject\Price;
 
 /**
- * [Description PercentageDiscount]
+ * Apply discounts by percentage values.
  */
 class PercentageDiscount extends AbstractDiscount
 {

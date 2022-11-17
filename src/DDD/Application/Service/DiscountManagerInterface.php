@@ -15,5 +15,5 @@ interface DiscountManagerInterface
 
     public function applyDiscounts();
 
-    public function applyMaxDiscount();
+    public function setMaxDiscount();
 }

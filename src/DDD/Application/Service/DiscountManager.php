@@ -40,7 +40,7 @@ class DiscountManager implements DiscountManagerInterface
     }
 
     /**
-     * [Description for setProduct]
+     * Set product to apply discount(s)
      *
      * @param Product $product
      * 
@@ -55,7 +55,7 @@ class DiscountManager implements DiscountManagerInterface
     }
 
     /**
-     * [Description for loadDiscountsFromDbDiscountRules]
+     * Load discount rules from database, based on the current product (by his category and by his sku identifier)
      *
      * @return void
      * 
@@ -82,7 +82,7 @@ class DiscountManager implements DiscountManagerInterface
     }
 
     /**
-     * [Description for setDiscounts]
+     * Set discounts collection directly from objects.
      *
      * @param ArrayCollection $discounts
      * 
@@ -97,7 +97,7 @@ class DiscountManager implements DiscountManagerInterface
     }
 
     /**
-     * [Description for addDiscount]
+     * Add a new discount to the collection.
      *
      * @param Discount $discount
      * 
@@ -112,7 +112,7 @@ class DiscountManager implements DiscountManagerInterface
     }
 
     /**
-     * [Description for getDiscounts]
+     * Get the discount collection.
      *
      * @return ArrayCollection
      * 
@@ -123,7 +123,7 @@ class DiscountManager implements DiscountManagerInterface
     }
 
     /**
-     * [Description for applyDiscounts]
+     * Apply the discounts based on the highest discount, when more than one discount is in the discounts collection.
      *
      * @return [type]
      * 
@@ -133,7 +133,7 @@ class DiscountManager implements DiscountManagerInterface
         if ($this->discounts->count() == 1) {
             $this->discount = $this->discounts->first();
         } elseif ($this->discounts->count() > 1) {
-            $this->applyMaxDiscount();
+            $this->setMaxDiscount();
         }
 
         $this->apply();
@@ -141,12 +141,12 @@ class DiscountManager implements DiscountManagerInterface
     }
 
     /**
-     * [Description for applyMaxDiscount]
+     * Determine the discount in the collection with the highest discount value.
      *
      * @return [type]
      * 
      */
-    public function applyMaxDiscount()
+    public function setMaxDiscount()
     {
         $maxDiscount = null;
 
@@ -159,11 +159,10 @@ class DiscountManager implements DiscountManagerInterface
         };
 
         $this->discount = $maxDiscount;
-        $this->apply();
     }
 
     /**
-     * [Description for apply]
+     * Apply the chosen discount.
      *
      * @return [type]
      * 
@@ -179,7 +178,6 @@ class DiscountManager implements DiscountManagerInterface
     }
 
     /**
-     * [Description for getPriceModel]
      *
      * @return PriceModel
      * 

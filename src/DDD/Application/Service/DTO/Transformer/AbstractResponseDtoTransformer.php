@@ -10,8 +10,6 @@ namespace App\DDD\Application\Service\DTO\Transformer;
 abstract class AbstractResponseDtoTransformer implements ResponseDtoTransformerInterface
 {
     /**
-     * [Description for transformComposeFromObjects]
-     *
      * @param iterable $objects
      * @param mixed $object2
      * 

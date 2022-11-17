@@ -5,7 +5,7 @@ namespace App\DDD\Domain;
 use App\DDD\Domain\ValueObject\Price;
 
 /**
- * [Description FixedDiscount]
+ * Apply fixed discounts values.
  */
 class FixedDiscount extends AbstractDiscount
 {
