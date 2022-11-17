@@ -173,8 +173,6 @@ class DiscountManager implements DiscountManagerInterface
         $this->priceModel->setOriginal($this->product->getPrice());
         $this->priceModel->setFinal(!is_null($this->discount) ? $this->discount->getFinalPrice() : $this->product->getPrice());
         $this->priceModel->setDiscountPercentage(!is_null($this->discount) ? $this->discount->getAmount() : null);
-
-        //dump($this->discount); echo $this->discount->getFinalPrice() . PHP_EOL;
     }
 
     /**
