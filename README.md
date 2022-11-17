@@ -6,7 +6,7 @@ With a DDD architecture, is also TDD and has applied SOLID principles, PSR-X and
 Curl https://curl.se/  
 GNU Make https://www.gnu.org/software/make/  
 PHP 8 (with required extensions for Symfony 6)  
-MySQL >8  
+MySQL 8  
 
 ## Install and run the project
 - Download this repository  
