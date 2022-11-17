@@ -49,6 +49,11 @@ final class DiscountManagerTest extends TestCase
         $dm->setProduct($product);
         // Not getting discounts from discountRules database.
         $dm->setDiscounts($discounts);
+        // Test add discount
+        $dm->addDiscount(new PercentageDiscount(
+            new Price($product->getPrice()),
+            20
+        ));
         $dm->applyDiscounts();
 
         $priceModel = $dm->getPriceModel();
