@@ -53,3 +53,6 @@ To run PHPUnit tests `bin/phpunit`
         "currency": "EUR"
     }
 }```   
+
+## Final notes.
+For educational purposes, developing branches are kept just to show up the coding flow and let a better follow up.
