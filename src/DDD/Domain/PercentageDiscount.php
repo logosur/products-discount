@@ -23,7 +23,7 @@ class PercentageDiscount extends AbstractDiscount
      */
     public function getFinalPrice(): int
     {
-        return round($this->price + (($this->amount / 100 ) * $this->price));
+        return round($this->price - (($this->amount / 100 ) * $this->price));
     }
 
     /**

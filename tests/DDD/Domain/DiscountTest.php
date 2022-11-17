@@ -34,6 +34,6 @@ final class DiscountTest extends TestCase
         $discount = new PercentageDiscount(new Price(100), 21);
         $priceReduced = $discount->getFinalPrice();
 
-        $this->assertEquals($priceReduced, 121);
+        $this->assertEquals($priceReduced, 79);
     }
 }

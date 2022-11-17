@@ -67,7 +67,7 @@ class SearchController extends AbstractController
             $discountManager->loadDiscountsFromDbDiscountRules();
             $discountManager->applyDiscounts();
             $priceModel = $discountManager->getPriceModel();
-            
+
             $productsDto[] = $productResponseDtoTransformer->transformComposeFromObject($product, $priceModel);
         }
 

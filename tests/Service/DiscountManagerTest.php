@@ -53,7 +53,7 @@ final class DiscountManagerTest extends TestCase
 
         $priceModel = $dm->getPriceModel();
         
-        $this->assertEquals($priceModel->getFinal(), 92300);
+        $this->assertEquals($priceModel->getFinal(), 49700);
     }
 
     /**
