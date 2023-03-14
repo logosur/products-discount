@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\DDD\Domain;
+namespace Tests\IntegrationTest;
 
 use PHPUnit\Framework\TestCase;
 use App\DDD\Application\Service\DiscountManager;
