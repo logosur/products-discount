@@ -27,6 +27,8 @@ class DiscountManager implements DiscountManagerInterface
      */
     private PriceModel $priceModel;
 
+    private ?DiscountRuleRepository $discountRuleRepository;
+
     /**
      * @var Product
      */

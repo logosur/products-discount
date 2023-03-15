@@ -37,11 +37,11 @@ final class DiscountManagerTest extends TestCase
         
         $discounts = new ArrayCollection([
             new PercentageDiscount(
-                new Price($product->getPrice()),
+                (new Price($product->getPrice())),
                 30
             ),
             new PercentageDiscount(
-                new Price($product->getPrice()),
+                (new Price($product->getPrice())),
                 15
             )
         ]);
@@ -51,7 +51,7 @@ final class DiscountManagerTest extends TestCase
         $dm->setDiscounts($discounts);
         // Test add discount
         $dm->addDiscount(new PercentageDiscount(
-            new Price($product->getPrice()),
+            (new Price($product->getPrice())),
             20
         ));
         $dm->applyDiscounts();

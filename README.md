@@ -21,8 +21,8 @@ To run PHPUnit tests `bin/phpunit`
 - A DiscountRules entity is set from where you can apply discount rules either based on specific products, either by categories.  
 - If categories discounts may collide with specific products discounts, only the higher discount is applied.
 - A single GET endpoint is provided in /products path with two query string parameters: category (integer id) and priceLessThan (optional integer).  
-`/products?category=1`   
-`/products?category=1&priceLessThan=99999`   
+`/api/products?category=1`   
+`/api/products?category=1&priceLessThan=99999`   
 - Currency response is always euros EUR.  
 - Response is limited to 5, no matter the order.
 - Example result outputs:  

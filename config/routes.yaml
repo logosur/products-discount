@@ -1,3 +1,4 @@
 controllers:
     resource: ../src/DDD/Presentation/Controller/SearchController.php
     type: attribute
+    prefix: /api
